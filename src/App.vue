@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <app-header @displayUI="uiOn=true, headerOn=false, user=$event"  :headerOn="headerOn" />
+  <UI :uiOn="uiOn" :user="user" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'
+import UI from './components/UI.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppHeader,
+    UI
+  },
+  data() {
+    return {
+      uiOn: false,
+      headerOn: true,
+      user: "Guest1"
+    }
   }
 }
 </script>
