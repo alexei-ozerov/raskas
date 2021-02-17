@@ -1,17 +1,24 @@
 .DS_Store
-node_modules
+portal/node_modules
+portal/.pnp
+portal/.pnp.js
 /dist
 
+# testing
+portal/coverage
+
+# production
+portal/build
 
 # local env files
-.env.local
-.env.*.local
+portal/.env.local
+portal/.env.*.local
 
 # Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+portal/npm-debug.log*
+portal/yarn-debug.log*
+portal/yarn-error.log*
+portal/pnpm-debug.log*
 
 # Editor directories and files
 .idea
