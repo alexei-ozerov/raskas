@@ -17,7 +17,12 @@ class ChatHistory extends Component {
   render() {
     console.log(this.props.chatHistory);
     const messages = this.props.chatHistory.map(msg => <Message message={msg.data} />);
-  
+    const entries = [
+      "Test number one",
+      "Test number two",
+      "Test number three"
+    ];
+
     return (
       <div className='body'>
         <div className='cent'>
@@ -30,6 +35,11 @@ class ChatHistory extends Component {
           </div>
           <div className='container-r'>
             <h2>Journal</h2>
+            <div id="scroller" className='content-journal'>
+              {entries.map((entry) => (
+                <p>{entry}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
